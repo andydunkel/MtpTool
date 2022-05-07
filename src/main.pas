@@ -13,6 +13,7 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    ButtonChangeAll: TButton;
     ButtonChange: TButton;
     ButtonAddFiles: TButton;
     GroupBox1: TGroupBox;
@@ -48,7 +49,6 @@ implementation
 
 procedure TForm1.ButtonAddFilesClick(Sender: TObject);
 begin
-
   if OpenDialog.Execute then
   begin
     CreateFileList(OpenDialog.Files);
