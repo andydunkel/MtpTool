@@ -1,0 +1,103 @@
+object Form1: TForm1
+  Left = 489
+  Height = 445
+  Top = 266
+  Width = 963
+  Caption = 'MTP File Date Tool'
+  ClientHeight = 445
+  ClientWidth = 963
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.2.0.4'
+  object ButtonAddFiles: TButton
+    Left = 8
+    Height = 25
+    Top = 8
+    Width = 128
+    Caption = 'Add files'
+    OnClick = ButtonAddFilesClick
+    TabOrder = 0
+  end
+  object ListBoxFiles: TListBox
+    Left = 8
+    Height = 392
+    Top = 40
+    Width = 552
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ItemHeight = 0
+    OnSelectionChange = ListBoxFilesSelectionChange
+    TabOrder = 1
+  end
+  object GroupBox1: TGroupBox
+    Left = 568
+    Height = 393
+    Top = 40
+    Width = 384
+    Anchors = [akTop, akRight, akBottom]
+    Caption = 'File information'
+    ClientHeight = 373
+    ClientWidth = 380
+    ParentFont = False
+    TabOrder = 2
+    object Label1: TLabel
+      Left = 8
+      Height = 15
+      Top = 8
+      Width = 51
+      Caption = 'Filename:'
+    end
+    object LabelFileName: TLabel
+      Left = 8
+      Height = 15
+      Top = 28
+      Width = 9
+      Caption = '...'
+    end
+    object Label2: TLabel
+      Left = 8
+      Height = 15
+      Top = 55
+      Width = 70
+      Caption = 'Created date:'
+    end
+    object LabelCreatedDate: TLabel
+      Left = 8
+      Height = 15
+      Top = 75
+      Width = 9
+      Caption = '...'
+      Font.Color = clHighlight
+      ParentFont = False
+      OnClick = LabelCreatedDateClick
+    end
+    object Label3: TLabel
+      Left = 10
+      Height = 15
+      Top = 95
+      Width = 73
+      Caption = 'Last changed:'
+    end
+    object LabelLastChanged: TLabel
+      Left = 10
+      Height = 15
+      Top = 115
+      Width = 9
+      Caption = '...'
+    end
+    object ButtonChange: TButton
+      Left = 8
+      Height = 25
+      Top = 144
+      Width = 144
+      Caption = 'Created to last changed'
+      OnClick = ButtonChangeClick
+      TabOrder = 0
+    end
+  end
+  object OpenDialog: TOpenDialog
+    Filter = '*.*'
+    Options = [ofAllowMultiSelect, ofFileMustExist, ofEnableSizing, ofViewDetail]
+    Left = 222
+    Top = 179
+  end
+end
